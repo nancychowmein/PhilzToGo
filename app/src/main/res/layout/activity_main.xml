@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/catan_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/philzlogo"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/name_header"
+            style="@style/QuestionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Who will be enjoying this cup of Philz?" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:id="@+id/type"
+            style="@style/QuestionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Choose Type" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/hot_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text= "Hot"
+                    app:fontFamily="@font/montserrat"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="24dp"
+                    android:onClick="onRadioButtonSelected"/>
+                <RadioButton
+                    android:id="@+id/cold_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text= "Iced"
+                    app:fontFamily="@font/montserrat"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="24dp"
+                    android:layout_marginBottom="25dp"
+                    android:onClick="onRadioButtonSelected"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/size"
+            style="@style/QuestionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Choose Size"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/small_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "Small"
+                app:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="24dp"/>
+            <RadioButton
+                android:id="@+id/medium_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "Medium"
+                android:textSize="16sp"
+                app:fontFamily="@font/montserrat"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="24dp"/>
+            <RadioButton
+                android:id="@+id/large_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "Large"
+                app:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="25dp"
+                android:paddingLeft="24dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/toppings"
+            style="@style/QuestionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Select Toppings" />
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Whipped cream"
+            app:fontFamily="@font/montserrat"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="24dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/cinnamon_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Cinnamon"
+            app:fontFamily="@font/montserrat"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="24dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/chocolate_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Chocolate"
+            app:fontFamily="@font/montserrat"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="25dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            style="@style/QuestionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Select Quantity" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginLeft="10dp"
+                android:text="-"
+                android:layout_marginBottom="25dp"
+                android:background="#492200"
+                android:textColor="@android:color/white"
+                android:onClick="decrement" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="14dp"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:background="#492200"
+                android:layout_marginBottom="25dp"
+                android:onClick="increment" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            app:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:onClick="submitOrder"
+            android:background="#492200"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="25dp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
